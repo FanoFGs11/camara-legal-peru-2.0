@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { colors: { legal: { red: '#E50000', blue: '#0056B3', dark: '#002B49', gold: '#FFD700' } }, fontFamily: { title: ['"Playfair Display"', 'serif'], sans: ['"Inter"', 'sans-serif'], } } } }
+        tailwind.config = { theme: { extend: { colors: { legal: { red: '#E50000', blue: '#0056B3', dark: '#002B49', gold: '#FFD700', gray: '#F4F6F9' } }, fontFamily: { title: ['"Playfair Display"', 'serif'], sans: ['"Inter"', 'sans-serif'], } } } }
     </script>
 </head>
 <body class="font-sans text-gray-800 bg-white">
@@ -22,24 +22,29 @@
                     <span class="text-sm font-bold text-legal-red tracking-widest uppercase">Defensa Legal al Médico</span>
                 </div>
             </a>
-            <nav class="hidden md:flex gap-8 items-center">
-                <a href="index.html" class="text-gray-600 font-bold uppercase hover:text-legal-blue transition-colors">Inicio</a>
-                <a href="nosotros.html" class="text-gray-600 font-bold uppercase hover:text-legal-blue transition-colors">Nosotros</a>
-                <a href="servicios.html" class="text-gray-600 font-bold uppercase hover:text-legal-blue transition-colors">Áreas de Práctica</a>
-                <a href="contacto.html" class="bg-legal-dark text-white px-6 py-3 rounded-md font-bold uppercase shadow-[0_4px_15px_rgba(0,43,73,0.3)] hover:bg-legal-blue hover:-translate-y-1 transition-all duration-300">Contactar Ahora</a>
+            <nav class="hidden md:flex gap-8 items-center text-sm font-bold uppercase tracking-wide">
+                <a href="index.html" class="text-gray-600 hover:text-legal-blue transition-colors">Inicio</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-legal-blue transition-colors">Nosotros</a>
+                <a href="servicios.html" class="text-gray-600 hover:text-legal-blue transition-colors">Áreas de Práctica</a>
+                <a href="contacto.html" class="bg-legal-dark text-white px-6 py-3 rounded-md shadow-[0_4px_15px_rgba(0,43,73,0.3)] hover:bg-legal-blue hover:-translate-y-1 transition-all duration-300">Evaluar mi caso</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="bg-legal-dark py-6 border-b-8 border-legal-blue"></div>
+        <section class="py-20 bg-gradient-to-br from-legal-dark via-[#001a33] to-black border-b-8 border-legal-blue text-center text-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="gsap-anim fade-up text-5xl font-extrabold font-title mb-4">Innovación Digital</h1>
+                <p class="gsap-anim fade-up text-legal-gold tracking-widest uppercase font-bold mt-2">Justicia a un solo clic</p>
+            </div>
+        </section>
 
-        <section class="py-16 bg-white">
+        <section class="py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     
                     <div class="gsap-anim slide-left mt-8">
-                        <span class="text-legal-red font-bold uppercase tracking-widest mb-2 block">Atención Inmediata</span>
+                        <span class="text-legal-red font-bold uppercase tracking-widest mb-2 block">Atención Prioritaria</span>
                         <h2 class="text-5xl font-extrabold text-legal-dark font-title mb-6">Contáctenos</h2>
                         <p class="text-gray-600 text-xl mb-10 leading-relaxed">Si cree que sus derechos están siendo vulnerados, no lo dude. Asumimos la defensa integral desde el día siguiente de ocurrido el evento.</p>
                         
@@ -69,30 +74,30 @@
                     </div>
 
                     <div class="gsap-anim slide-right bg-slate-50 p-10 rounded-2xl shadow-2xl border-t-8 border-legal-red">
-                        <form id="whatsappForm" class="flex flex-col gap-6">
+                        <form id="contactForm" class="flex flex-col gap-6">
                             <div>
-                                <h3 class="text-3xl font-extrabold text-legal-dark font-title">Solicite Asesoría</h3>
+                                <h3 class="text-3xl font-extrabold text-legal-dark font-title mb-2">Evaluar mi caso</h3>
                                 <p class="text-gray-500 mt-2">Complete los datos para comunicación segura.</p>
                             </div>
                             
                             <div class="flex flex-col gap-2">
                                 <label class="font-bold text-legal-dark text-sm">Nombre del Profesional</label>
-                                <input type="text" id="nombreDoctor" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all" placeholder="Ej. Dr. Juan Pérez" required>
+                                <input type="text" id="cNombre" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all" placeholder="Ej. Dr. Juan Pérez" required>
                             </div>
 
                             <div class="flex flex-col gap-2">
                                 <label class="font-bold text-legal-dark text-sm">Correo Electrónico</label>
-                                <input type="email" id="correoDoctor" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all" placeholder="Ej. doctor@correo.com" required>
+                                <input type="email" id="cEmail" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all" placeholder="Ej. doctor@correo.com" required>
                             </div>
 
                             <div class="flex flex-col gap-2">
                                 <label class="font-bold text-legal-dark text-sm">Especialidad Médica</label>
-                                <input type="text" id="especialidadMedica" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all" placeholder="Ej. Cirugía General" required>
+                                <input type="text" id="cEsp" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all" placeholder="Ej. Cirugía General" required>
                             </div>
 
                             <div class="flex flex-col gap-2">
                                 <label class="font-bold text-legal-dark text-sm">Detalle de la Consulta</label>
-                                <textarea id="detalleCaso" rows="4" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all resize-none" placeholder="Describa brevemente el caso..." required></textarea>
+                                <textarea id="cCaso" rows="4" class="p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue transition-all resize-none" placeholder="Describa brevemente el caso..." required></textarea>
                             </div>
 
                             <button type="submit" class="mt-4 w-full bg-legal-blue text-white font-bold text-lg py-5 rounded-lg flex justify-center items-center gap-3 hover:bg-legal-dark hover:shadow-lg transition-all duration-300">
@@ -105,29 +110,33 @@
         </section>
     </main>
 
-    <footer class="bg-legal-dark py-12 text-center border-t-4 border-legal-red">
-        <div class="max-w-7xl mx-auto px-4"><p class="text-gray-300 text-lg">&copy; 2026 Cámara Legal Peruana. Todos los derechos reservados.</p></div>
+    <footer class="bg-legal-dark py-12 text-center text-gray-400 border-t-4 border-legal-red">
+        <p>&copy; 2026 Cámara Legal Peruana. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
+        
+        // Animación de los Títulos del Banner
+        gsap.utils.toArray('.fade-up').forEach(el => {
+            gsap.fromTo(el, {y: 40, autoAlpha: 0}, {scrollTrigger: {trigger: el, start: "top 90%"}, y: 0, autoAlpha: 1, duration: 1});
+        });
+
+        // Animación de los Contenidos Principales
         gsap.fromTo(".slide-left", {x: -50, autoAlpha: 0}, {scrollTrigger: {trigger: ".slide-left", start: "top 85%"}, x: 0, autoAlpha: 1, duration: 1, ease: "power3.out"});
         gsap.fromTo(".slide-right", {x: 50, autoAlpha: 0}, {scrollTrigger: {trigger: ".slide-right", start: "top 85%"}, x: 0, autoAlpha: 1, duration: 1, delay: 0.3, ease: "power3.out"});
 
-        // SCRIPT ACTUALIZADO PARA INCLUIR EL CORREO
-        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        // Evento Formulario WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const nombre = document.getElementById('nombreDoctor').value;
-            const correo = document.getElementById('correoDoctor').value; // Captura del nuevo campo
-            const esp = document.getElementById('especialidadMedica').value;
-            const caso = document.getElementById('detalleCaso').value;
-            
-            // Formateo del mensaje con el correo incluido
-            const url = `https://api.whatsapp.com/send?phone=51986058483&text=Hola Cámara Legal Peruana.%0A%0A*SOLICITUD DE ASESORÍA PRIORITARIA*%0A---------------------------------%0AProfesional: ${nombre}%0ACorreo: ${correo}%0AEspecialidad: ${esp}%0A%0AConsulta:%0A${caso}`;
-            
-            window.open(url, '_blank');
+            const n = document.getElementById('cNombre').value;
+            const em = document.getElementById('cEmail').value;
+            const s = document.getElementById('cEsp').value;
+            const c = document.getElementById('cCaso').value;
+            const msg = `Hola Cámara Legal Peruana.%0A%0A*NUEVA SOLICITUD DE DEFENSA*%0A---------------------------------%0AProfesional: ${encodeURIComponent(n)}%0ACorreo: ${encodeURIComponent(em)}%0AEspecialidad: ${encodeURIComponent(s)}%0A%0ACaso:%0A${encodeURIComponent(c)}`;
+            window.open(`https://api.whatsapp.com/send?phone=51986058483&text=${msg}`, '_blank');
         });
     </script>
 </body>
