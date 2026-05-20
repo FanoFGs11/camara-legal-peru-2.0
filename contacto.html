@@ -134,6 +134,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
+
+        // LÓGICA DEL MENÚ HAMBURGUESA (MÓVIL)
+        const btnMenu = document.getElementById('btn-menu');
+        if (btnMenu) {
+            btnMenu.addEventListener('click', function() {
+                const menu = document.getElementById('menu-movil');
+                const icon = this.querySelector('i');
+                if (menu.classList.contains('pointer-events-none')) {
+                    menu.classList.remove('opacity-0', 'pointer-events-none');
+                    icon.classList.replace('fa-bars', 'fa-xmark');
+                } else {
+                    menu.classList.add('opacity-0', 'pointer-events-none');
+                    icon.classList.replace('fa-xmark', 'fa-bars');
+                }
+            });
+        }
+        
         gsap.registerPlugin(ScrollTrigger);
         
         // Animación de los Títulos del Banner
